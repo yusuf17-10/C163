@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="bullet.js"></script>
+    </head>
+    <body>
+
+        <a-scene id = "scene">
+            <a-entity id ="camera" position="0 4.5 120" camera wasd-controls look-controls = "pointerLockEnabled:false">
+                <a-cursor></a-cursor>
+            </a-entity>
+
+            <!-- Ground -->
+
+            <a-plane id = "ground" static-body depth="2" height="200" width="200" color = "green" position="0 -1 0" rotation="-90 0 0"></a-plane>
+
+            <a-box id = "box1" dynamic-body position="0 2 80" color = "orange" depth="2.5" height="5" width="5"></a-box>
+            <a-box id = "box2" dynamic-body position="-8 2 80" color = "blue" depth="2.5" height="5" width="5"></a-box>
+            <a-box id = "box3" dynamic-body position="8 2 80" color = "pink" depth="2.5" height="5" width="5"></a-box>
+            <a-box id = "box4" dynamic-body position="-4 7 80" color = "red" depth="2.5" height="5" width="5"></a-box>
+            <a-box id = "box5" dynamic-body position="4 7 80" color = "indigo" depth="2.5" height="5" width="5"></a-box>
+            <a-box id = "box6" dynamic-body position="0 12 80" color = "yellow" depth="2.5" height="5" width="5"></a-box>
+
+            <a-box id = "wall1" static-body position="0 20 70" color="brown" width = "30" height="50" depth="1"></a-box>
+            <a-box id = "wall2" static-body position="30 20 70" color="blue" width = "30" height="50" depth="1"></a-box>
+            <a-box id = "wall3" static-body position="60 20 70" color="red" width = "30" height="50" depth="1"></a-box>
+            <a-box id = "wall4" static-body position="-30 20 70" color="yellow" width = "30" height="50" depth="1"></a-box>
+            <a-box id = "wall5" static-body position="-60 20 70" color="pink" width = "30" height="50" depth="1"></a-box>
+
+            <a-entity id = "bullet" bullets></a-entity>
+
+        </a-scene>
+
+    </body>
+</html>
